@@ -22,28 +22,7 @@ def calculate_volume_cilinder(height, radius):
 def calculate_volume_sphere(radius): 
     return (float(radius) **3) * pi * 4/3
 
-#
-    
 
-#%%
-    
-import matplotlib.pyplot as plt
-from scipy.stats import norm
-
-grades = norm.rvs(10, 25, size=100)
-
-mu, std = norm.fit(grades)
-
-bins = 4 
-
-
-
-
-plt.xlabel('percentage')
-plt.ylabel('percentage')
-
-plt.hist(grades,bins, density=False, alpha=0.8, color='b')
-plt.show()
 
 #%%BLUE BELT 2.1
 
@@ -79,7 +58,7 @@ def histogram(total_students):
     plt.show()
     
     
-histogram(1466)    
+histogram(100)    
 
 #%%
 
