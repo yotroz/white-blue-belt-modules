@@ -1,0 +1,17 @@
+[
+  "test_session_11.py::test_empty_list_returns_none",
+  "test_session_11.py::test_list_returns_one_item_price",
+  "test_session_11.py::test_list_returns_two_items_price",
+  "test_session_11.py::test_list_returns_two_same_items_price",
+  "test_session_11.py::test_list_returns_item_not_in_list",
+  "test_session_11.py::test_empty_list",
+  "test_session_11.py::test_repeated_insurance",
+  "test_session_11.py::test_repeated_priority",
+  "test_session_11.py::test_repeated_both",
+  "test_session_11.py::test_all_products_and_services_once",
+  "test_session_11.py::test_two_products_insurance_and_services_once",
+  "test_session_11.py::test_two_products_insurance_twice",
+  "test_session_11.py::test_normal_all_products_and_services",
+  "test_session_11.py::test_gold_all_products_and_services",
+  "test_session_11.py::test__silver_all_products_and_services"
+]
