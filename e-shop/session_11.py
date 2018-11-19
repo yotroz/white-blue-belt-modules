@@ -170,7 +170,7 @@ def checkout_3(shopping_cart, tier):
             else: 
                 final_price += (product_list[item]) * tiers[tier]
             
-        
+#return and rounding to two decimal numbers     
     return round(final_price, 2)  
    
 
