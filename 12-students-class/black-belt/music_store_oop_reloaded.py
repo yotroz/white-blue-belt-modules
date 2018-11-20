@@ -83,9 +83,6 @@ priority_mail = Service("Priority mail", 10)
 
 
 
-test_cart = Cart()
-
-test_cart.add_product_to_cart(guitar)
 
 cart1 = Cart()
 
