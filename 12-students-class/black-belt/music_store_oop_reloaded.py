@@ -65,25 +65,26 @@ class Cart:
             
         return final_price
                 
+ 
+#We create the tiers    
 gold = Tier("gold", .95)  
-
 silver = Tier("silver", .98)
-
 normal = Tier("normal", 1)
 
+
+
+#We create the products
 guitar = Product("Guitar", 1000)
-
 pick_box = Product("Pick box", 5)
-
 guitar_string = Product("Guitar string", 10)
 
+#We create the services
 insurance = Service("Insurance", 5)
-
 priority_mail = Service("Priority mail", 10)
 
 
 
-
+#tests cases 
 cart1 = Cart()
 
 cart1.add_product_to_cart(guitar)
