@@ -61,7 +61,7 @@ class Cart:
                     final_price += service.price * tier.discount
             
                 else:
-                    final_price += service.price * tier.discount
+                    final_price += service.price 
             
         return final_price
                 
@@ -87,8 +87,12 @@ priority_mail = Service("Priority mail", 10)
 cart1 = Cart()
 
 cart1.add_product_to_cart(guitar)
+cart1.add_product_to_cart(guitar)
 
 cart1.add_service_to_cart(insurance)
+cart1.add_service_to_cart(insurance)
+cart1.add_service_to_cart(insurance)
+
 
 
 
