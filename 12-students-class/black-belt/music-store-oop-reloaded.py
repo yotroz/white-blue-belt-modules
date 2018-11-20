@@ -29,9 +29,12 @@ class Tier:
         self.discount = discount 
 
 class Cart: 
-    def __init__(self, products, services):
-        self.products = []
-        self.services = []
+    products = []
+    services = []
+    
+    def __init__(self):
+        pass
+
         
     def add_product_to_cart(self, product):
         self.products.append(product)
@@ -43,19 +46,30 @@ class Cart:
             pass
         
     def checkout(self, tier): 
+        
+        final_price = 0
+        
         for product in self.products:
-            if tier == "gold":
-                return (product.price + service.price)* self.tier.discount
+                if tier == gold or silver:
+                    final_price += product.price * tier.discount
+                
+                else: 
+                     final_price += product.price * tier.discount
+                
+        for service in self.services: 
+                if tier == gold:
+                    final_price += service.price * tier.discount
             
-            elif tier == "silver":
-                return (self.products.price * tier.discount) + self.services.price
+                else:
+                    final_price += service.price * tier.discount
             
-            else: 
-                return self.products.price + self.services.price
-            
+        return final_price
+                
 gold = Tier("gold", .95)  
 
 silver = Tier("silver", .98)
+
+normal = Tier("normal", 1)
 
 guitar = Product("Guitar", 1000)
 
@@ -67,9 +81,18 @@ insurance = Service("Insurance", 5)
 
 priority_mail = Service("Priority mail", 10)
 
-test_cart = Cart("Guitar", "Insurance")
+
+
+test_cart = Cart()
 
 test_cart.add_product_to_cart(guitar)
+
+cart1 = Cart()
+
+cart1.add_product_to_cart(guitar)
+
+cart1.add_service_to_cart(insurance)
+
 
 
 
