@@ -29,13 +29,13 @@ class Tier:
         self.discount = discount 
 
 class Cart: 
-    products = []
-    services = []
+#    products = []
+#    services = []
     
     def __init__(self, name):
-        self.name = name
-#       self.products = []
-#       self.services = []
+       self.name = name
+       self.products = []
+       self.services = []
 
         
     def add_product_to_cart(self, product):
@@ -45,7 +45,7 @@ class Cart:
     def add_service_to_cart(self, service):
         if service not in self.services: 
             self.services.append(service)
-            return "A $ " + str(service.price) + " " + str(service.name) + " has been added to you cart!"
+            return "A $" + str(service.price) + " " + str(service.name) + " has been added to you cart!"
         else: 
             return "This " + str(service.name) + " is already added to you cart!"
         
@@ -55,6 +55,7 @@ class Cart:
         
         
         for product in self.products:
+                print(str(product.name) + " $" + str(product.price))
                 if tier == gold or silver:
                     final_price += product.price * tier.discount
                 
@@ -62,14 +63,14 @@ class Cart:
                      final_price += product.price * tier.discount
                 
         for service in self.services: 
-                print(service)
+                print(str(service.name) + " $" + str(service.price))
                 if tier == gold:
                     final_price += service.price * tier.discount
             
                 else:
                     final_price += service.price 
   
-        return final_price
+        return "Your total is $" + str(final_price)
                 
  
 #We create the tiers    
