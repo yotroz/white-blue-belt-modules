@@ -1,10 +1,10 @@
 #%%
 from itertools import combinations
 
-graph1 =  {
+graph10 =  {
             "a": ["b","c","d"],
             "b": ["d"],
-            "c" : ["d"],
+            "c" : ["a"],
             "d" : ["a"],
             }
 
@@ -25,6 +25,8 @@ graph3 = {
  
 
 def fully_connected(graph):  
+    
+#    problem this still doesn't work if we repeat connections
     
     nodes = [nodes for nodes in graph]    
     
@@ -50,7 +52,7 @@ def fully_connected(graph):
 
 
 #%%
-from itertools import combinations
+from itertools import combinations, permutations
 
 #Writting our own combinations algorithm could probably take a while: 
 # The actual implementation of the combinations function from the library 
@@ -78,7 +80,13 @@ graph3 = {
         "d": ["a"]
         }        
         
- 
+graph10 =  {
+            "a": ["b","c","d"],
+            "b": ["d"],
+            "c" : ["d"],
+            "d" : ["a"],
+            }
+
 
 def fully_connected_explanation(graph):  
     
