@@ -18,3 +18,5 @@ class Student:
 
 tancredi = Student("Tancredi", "Rossetti", "9", "MCSBT")
     
+
+print(tancredi.name + " " + tancredi.last_name + " " + " is " + tancredi.age + " and in the " + tancredi.master)
