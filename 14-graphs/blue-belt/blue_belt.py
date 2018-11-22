@@ -7,13 +7,13 @@ graph1 =  {
             "a": ["b","c","d","e", "d"],
             "b": ["d"],
             "c" : ["d"],
-            "d" : ["e"],
+            "d" : ["a", "b", "c", "e"],
             "e": []
             }
 
-def fully_connected(g): 
+def fully_connected_node(g): 
     
-    #this method only works with 
+    #this method only works to find out if a single node is fully connected
     
 #    get the lenght of the nodes
 #    evaluate if the current node's edge list has the same lenght as itseñf
@@ -23,9 +23,14 @@ def fully_connected(g):
     
 #    print(pairs)
     
+    connected_nodes = []
+    
     for node in g: 
         if len(set(g[node])) == pairs:
-            return "The node '" + node + "' is fully connected"
+            connected_nodes.append(node)
+            
+    
+    return "The nodes '" + str(connected_nodes) + "' are connected to all nodes"
 
 
 #%%
@@ -39,7 +44,7 @@ graph1 =  {
             "d" : ["e"],
             }
 
-def fully_connected_alt(graph): 
+def fully_connected_permutations(graph): 
     
         
 #   if there is 4 nodes we have to evaluate 6 connections 
