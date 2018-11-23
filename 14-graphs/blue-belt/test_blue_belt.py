@@ -2,7 +2,7 @@
 
 from blue_belt import fully_connected
 
-def test_six_but_one_missing_connection(): 
+def test_six_edges_but_one_repeated(): 
     
     value = [
                 {
