@@ -3,9 +3,9 @@ from itertools import combinations
 
 graph10 =  {
             "a": ["b","c","d"],
-            "b": ["d"],
-            "c" : ["a"],
-            "d" : ["a"],
+            "b": ["c"],
+            "c" : ["b", "d"],
+            "d" : ["b"],
             }
 
 graph2 = {
@@ -24,32 +24,44 @@ graph3 = {
         
  
 
-def fully_connected(graph):  
+def fully_connected_alt(graph):  
     
 #    problem this still doesn't work if we repeat connections
     
     nodes = [nodes for nodes in graph]    
     
+    
+    
     combinations_list = list(combinations(nodes,2))
     
     combinations_clean = [''.join(element) for element in combinations_list]
       
-    edges = [node + other_node for node in graph for other_node in graph[node]]    
+    edges = [node + other_node for node in graph for other_node in graph[node]]   
+    
+    print(edges)
+    print(combinations_clean)
+
+#    counter = 0
+#    for edge in edges: 
+#        if edge in combinations_clean or edge[::-1] in combinations_clean:
+#            counter += 1
+#            print(counter)
+#            if counter == len(combinations_clean): 
+#                return "THE GRAPH IS TOTALLY FOOOKING CONNECTED"
+#
+#    return "FOOOK NO!! THE GRAPH IS NOT TOTALLY CONNECTED"
+#                
 
     counter = 0
-    for edge in edges: 
-        if edge in combinations_clean or edge[::-1] in combinations_clean:
+    for combination in combinations_clean: 
+        if combination in edges or combination[::-1] in edges: 
             counter += 1
+            print(counter)
             if counter == len(combinations_clean): 
                 return "THE GRAPH IS TOTALLY FOOOKING CONNECTED"
 
     return "FOOOK NO!! THE GRAPH IS NOT TOTALLY CONNECTED"
-                
-
-
-
-
-
+                            
 
 #%%
 from itertools import combinations, permutations
