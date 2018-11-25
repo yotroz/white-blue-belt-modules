@@ -65,11 +65,9 @@ graph2 = {
         }
 
 def fully_connected_directed(g): 
-    
-    #this method only works to find out if a single node is fully connected
-    
+        
 #    get the lenght of the nodes
-#    evaluate if the current node's edge list has the same lenght as itseñf
+#    evaluate if the current node's edge list has the same lenght as itself
 #    but first we need to set() the list so we don't get repeated values
 #    
     pairs = (len(g) -1)
