@@ -168,6 +168,12 @@ graph1 =  {
             "e": []
             }
 
+graph2 = {
+        "a": ["b", "c"], 
+        "b": ["c", "a"], 
+        "c": ["b", "a"]
+        }
+
 def fully_connected_node(g): 
     
     #this method only works to find out if a single node is fully connected
@@ -186,8 +192,8 @@ def fully_connected_node(g):
         if len(set(g[node])) == pairs:
             connected_nodes.append(node)
             
-    
-    return "The nodes '" + str(connected_nodes) + "' are connected to all nodes"
+    if len(connected_nodes) == pairs + 1: 
+        return "The nodes '" + str(connected_nodes) + "' are connected to all nodes. So it is fully connected"
 
 
 #%%
@@ -249,6 +255,24 @@ def fully_connected_permutations(graph):
             
 #       
     print(edges)
+    
+#%%
+
+graph = {
+        "a": ["b", "c"], 
+        "b": ["c", "a"], 
+        "c": ["a"]
+        }
+
+def fully_connected(g):
+    nodes = list(g.keys())
+    
+    
+    for i in g: 
+        if len(g[i]) == len(nodes) - 1: 
+            return True
+        else: 
+            return False
     
 
 

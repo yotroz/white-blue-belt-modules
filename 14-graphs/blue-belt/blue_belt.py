@@ -25,7 +25,7 @@ graph3 = {
         
  
 
-def fully_connected(graph):  
+def fully_connected_non_directed(graph):  
        
     nodes = [nodes for nodes in graph]    
     
@@ -43,6 +43,48 @@ def fully_connected(graph):
                 return "THE GRAPH IS TOTALLY FOOOKING CONNECTED"
 
     return "FOOOK NO!! THE GRAPH IS NOT TOTALLY CONNECTED"
+
+
+#%%
+
+#Create a function fully_connected to that returns 
+#True if a graph is fully connected, False otherwise
+
+graph1 =  {
+            "a": ["b","c","d","e", "d"],
+            "b": ["d"],
+            "c" : ["d"],
+            "d" : ["a", "b", "c", "e"],
+            "e": []
+            }
+
+graph2 = {
+        "a": ["b", "c"], 
+        "b": ["c", "a"], 
+        "c": ["b", "a"]
+        }
+
+def fully_connected_directed(g): 
+    
+    #this method only works to find out if a single node is fully connected
+    
+#    get the lenght of the nodes
+#    evaluate if the current node's edge list has the same lenght as itseñf
+#    but first we need to set() the list so we don't get repeated values
+#    
+    pairs = (len(g) -1)
+    
+#    print(pairs)
+    
+    connected_nodes = []
+    
+    for node in g: 
+        if len(set(g[node])) == pairs:
+            connected_nodes.append(node)
+            
+    if len(connected_nodes) == pairs + 1: 
+        return "The nodes '" + str(connected_nodes) + "' are connected to all nodes. So it is fully connected"
+
                             
 
 
