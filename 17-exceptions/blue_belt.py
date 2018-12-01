@@ -22,3 +22,6 @@ def print_file_uppercase(filename):
     
 print_file_uppercase("data.txt")
 print_file_uppercase("other_file.txt")
+
+
+    
